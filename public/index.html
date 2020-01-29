@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jump Knight AI</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <!-- p5 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js" SameSite=None></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js" SameSite=None></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js" SameSite=None></script>
+    <!-- ml5 - not working!!!!! AAAAHHH!!!! -->
+    <!-- <script src="https://cdn.jsdelivr.net/gh/ml5js/ml5-library/dist/ml5.min.js"></script> -->
+    <script src="https://unpkg.com/ml5@0.4.1/dist/ml5.min.js" SameSite=None></script>
+    <!-- JSDelivr : A tool for directly implementing a Gihub repo in my personal repo -->
+    <script src="https://cdn.jsdelivr.net/gh/bmoren/p5.collide2D/p5.collide2d.min.js" SameSite=None></script>
+    <!-- ReImprovejs -->
+    <script src="https://cdn.jsdelivr.net/npm/reimprovejs@0/dist/reimprove.js"></script>
+
+</head>
+
+<body>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        .modal-content h1 {
+            color: #daf1ff
+        }
+
+        .btn-success {
+            background-color: darkslategrey;
+            border: 1px solid #daf1ff;
+        }
+
+        .btn-success:hover {
+            background-color: rgb(29, 54, 54);
+            border: 1px solid #daf1ffe0;
+
+        }
+
+        .modal-content {
+            background-color: #24292e;
+            padding: 18px;
+            border-radius: 10px;
+        }
+    </style>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" SameSite=None></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js" SameSite=None></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore.js" SameSite=None></script>
+
+    <script src="js/sketch.js"></script>
+    <script src="js/dinosaur.js"></script>
+    <script src="js/controls.js"></script>
+    <script src="js/sprite.js"></script>
+    <script src="js/spike.js"></script>
+
+    <h4>🕴 Press SPACEBAR to Jump or Say "UP"</h4>
+    <h4 id="Board"></h4>
+    <div id="EndGame" class="modal-dialog text-center" style="visibility: hidden">
+        <div class="col-4 main-section">
+            <div class="modal-content">
+                <div class="col-12 form-input">
+                    <h1>You Died</h1>
+                    <button type="button" class="btn btn-success" onclick="restart()">Restart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="jumbo-canvas" class="jumbotron" style="width: 100vw; height: 50vw;"></div>
+
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
