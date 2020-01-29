@@ -83,22 +83,22 @@ function draw() {
     dinosaur.show()
     dinosaur.move()
     if (spikes.length > 0) {
-        let x1 = spikes[spikes.length - 1].x;
-        let y1 = spikes[spikes.length - 1].y;
-        let x2 = width;
-        let y2 = spikes[spikes.length - 1].y;
+        // let x1 = spikes[spikes.length - 1].x;
+        // let y1 = spikes[spikes.length - 1].y;
+        // let x2 = width;
+        // let y2 = spikes[spikes.length - 1].y;
         d = int(dist(spikes[spikes.length - 1].x, spikes[spikes.length - 1].y, width, spikes[spikes.length - 1].y));
 
-        push()
-        line(x1, y1, x2, y2);
-        ellipse(x1, y1, 7, 7);
-        pop()
+        // push()
+        // line(x1, y1, x2, y2);
+        // ellipse(x1, y1, 7, 7);
+        // pop()
 
-        push();
-        translate((x1 + x2) / 2, (y1 + y2) / 2);
-        rotate(atan2(y2 - y1, x2 - x1));
-        text(nfc(d, 1), 0, -5);
-        pop();
+        // push();
+        // translate((x1 + x2) / 2, (y1 + y2) / 2);
+        // rotate(atan2(y2 - y1, x2 - x1));
+        // text(nfc(d, 1), 0, -5);
+        // pop();
     }
     // && (_.range(50, 200).includes(d)) == false
     if (random(1) < 0.05 && d > 20 && d < 200) {
